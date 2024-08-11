@@ -3,16 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <title>nonezerone</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet preload" href="https://fonts.googleapis.com/css2?family=VT323&display=swap">
-        <!-- <link rel="preload" href="assets/fonts/VT323.woff2" as="font" type="font/woff2" crossorigin /> -->
+        <link rel="preload" href="assets/fonts/VT323.woff2" as="font" type="font/woff2" crossorigin />
         <style>
-             /* @font-face {
+             @font-face {
                  font-family: "VT323";
                  src: url("assets/fonts/VT323.woff2") format("woff2");
-                 font-display: swap;
-             } */
+             }
 
              * {
                  font-family: "VT323", monospace;
@@ -117,14 +113,14 @@
                  animation:
                      typing 2s steps(17, end),
                      blink .5s step-end infinite;
-                 animation-play-state: paused;
+                 /* animation-play-state: paused; */
              }
 
              .output {
                  width: 100%;
                  max-width: 80ch;
                  animation: fade 4s;
-                 animation-play-state: paused;
+                 /* animation-play-state: paused; */
              }
 
              /* animation */
@@ -209,7 +205,7 @@
             <h3>0.0.3</h3>
         </section>
     </body>
-    <script>
+    <!-- <script>
         const startAnimations = () => {
             const inanimateElements = document.querySelectorAll(".typing, .output");
             inanimateElements.forEach((element) => element.style.animationPlayState = "running");
@@ -217,5 +213,5 @@
         setTimeout(function() {
             startAnimations();
         }, 500);
-    </script>
+</script> -->
 </html>
