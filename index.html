@@ -4,6 +4,15 @@
         <meta charset="UTF-8">
         <title>nonezerone</title>
         <link rel="preload" href="assets/fonts/VT323.woff2" as="font" type="font/woff2" crossorigin />
+        <script type="module" defer>
+            const startAnimations = () => {
+                const inanimateElements = document.querySelectorAll(".typing, .output");
+                inanimateElements.forEach((element) => element.style.animationPlayState = "running");
+            }
+            setTimeout(function() {
+                startAnimations();
+            }, 1000);
+        </script>
         <style>
              @font-face {
                  font-family: "VT323";
@@ -113,14 +122,14 @@
                  animation:
                      typing 2s steps(17, end),
                      blink .5s step-end infinite;
-                 /* animation-play-state: paused; */
+                 animation-play-state: paused;
              }
 
              .output {
                  width: 100%;
                  max-width: 80ch;
                  animation: fade 4s;
-                 /* animation-play-state: paused; */
+                 animation-play-state: paused;
              }
 
              /* animation */
@@ -202,16 +211,7 @@
                 <span class="command">./about_me </span>
                 <span class="flag">--version</span>
             </div>
-            <h3>0.0.3</h3>
+            <h3>0.0.4</h3>
         </section>
     </body>
-    <!-- <script>
-        const startAnimations = () => {
-            const inanimateElements = document.querySelectorAll(".typing, .output");
-            inanimateElements.forEach((element) => element.style.animationPlayState = "running");
-        }
-        setTimeout(function() {
-            startAnimations();
-        }, 500);
-</script> -->
 </html>
