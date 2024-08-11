@@ -203,7 +203,7 @@
                 <span class="command">./about_me </span>
                 <span class="flag">--version</span>
             </div>
-            <h3>0.0.2</h3>
+            <h3>0.0.3</h3>
         </section>
     </body>
     <script>
@@ -211,10 +211,8 @@
             const inanimateElements = document.querySelectorAll(".typing, .output");
             inanimateElements.forEach((element) => element.style.animationPlayState = "running");
         }
-        document.addEventListener("DOMContentLoaded", (event) => {
+        setTimeout(function() {
             startAnimations();
-        });
-        // setTimeout(startAnimations(), 3000);
-        // startAnimations();
+        }, 500);
     </script>
 </html>
