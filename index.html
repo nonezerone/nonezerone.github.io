@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>nonezerone</title>
+        <link rel="preload" href="assets/fonts/VT323.woff2" as="font" type="font/woff2" crossorigin />
+        <script type="module" defer>
+            const startAnimations = () => {
+                const inanimateElements = document.querySelectorAll(".typing, .output");
+                inanimateElements.forEach((element) => element.style.animationPlayState = "running");
+            }
+            setTimeout(function() {
+                startAnimations();
+            }, 1000);
+        </script>
+        <style>
+             @font-face {
+                 font-family: "VT323";
+                 src: url("assets/fonts/VT323.woff2") format("woff2");
+             }
+
+             * {
+                 font-family: "VT323", monospace;
+                 font-weight: 400;
+                 font-style: normal;
+                 background: #000000;
+                 color: #b8bbbf;
+             }
+
+             body {
+                 min-height: 95vh;
+                 padding: 1rem;
+                 display: flex;
+                 flex-direction: column;
+                 font-size: 1rem;
+             }
+
+             h3 {
+                 display: inline-block;
+                 font-size: inherit;
+                 padding: 0 0.5em;
+                 margin-bottom: 0;
+                 background-color: #b8bbbf;
+                 color: #000000;
+             }
+
+             .option:hover {
+                 display: inline-block;
+                 font-size: inherit;
+                 padding: 0 0.5em;
+                 margin-bottom: 0;
+                 background-color: #b8bbbf;
+             }
+
+             .repl {
+                 display: inline-block;
+                 vertical-align: middle;
+             }
+
+             a {
+                 text-decoration: none;
+             }
+
+             ul {
+                 list-style-type: square;
+             }
+
+             .text-background {
+                 color: #4434d1;
+             }
+
+             .text-secondary {
+                 color: #b8bbbf;
+             }
+
+             .linkedin:hover {
+                 color: #034efc;
+             }
+
+             .github:hover {
+                 color: #04820a;
+             }
+
+             .cursor {
+                 color: #b8bbbf;
+             }
+
+             .command {
+                 color: #04820a;
+             }
+
+             .flag {
+                 color: #029ebd;
+             }
+
+             .path {
+                 color: #5b06d1;
+                 text-decoration: underline;
+             }
+
+             .ruby {
+                 color: #6b0303;
+             }
+
+             .python {
+                 color: #03396b;
+             }
+
+             .go {
+                 color: #05879c;
+             }
+
+             .typing {
+                 width: 17ch;
+                 overflow: hidden;
+                 white-space: nowrap;
+                 border-right: 10px solid #b8bbbf;
+                 animation:
+                     typing 2s steps(17, end),
+                     blink .5s step-end infinite;
+                 animation-play-state: paused;
+             }
+
+             .output {
+                 width: 100%;
+                 max-width: 80ch;
+                 animation: fade 4s;
+                 animation-play-state: paused;
+             }
+
+             /* animation */
+
+             @keyframes fade {
+             0% { opacity: 0}
+             50% { opacity: 0; }
+             100% { opacity: 1; }
+             }
+
+             @keyframes typing {
+             0% { width: 0; }
+             100% { width: 17ch; }
+             }
+
+             @keyframes blink {
+             50% { border-color: transparent; }
+             }
+
+             @media (min-width:600px) {
+                 body {
+                     font-size: 1.75rem;
+                 }
+             }
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="repl">
+                <span class="text-secondary">nonezerone@devnull </span>
+                <span class="text-background">~ </span>
+                <span class="cursor">$ </span>
+            </div>
+            <div class="repl typing">
+                <span class="command">./about_me </span>
+                <span class="flag">--help</span>
+            </div>
+        </div>
+        <section class="output">
+            <ul class="links">
+                <li>
+                    <a class="linkedin option" href="https://linkedin.com/in/vlad-medyansky" alt="linkedin" target="_blank">LinkedIn</a>
+                </li>
+                <li>
+                    <a class="github option" href="https://github.com/nonezerone" alt="github" target="_blank">GitHub</a>
+                </li>
+            </ul>
+            <p>
+                Hi! I build stuff primarily with <span class="ruby">Ruby</span> and <span class="ruby">Ruby on Rails</span>.<br>
+                Also checking out <span class="python">Python</span> and <span class="go">Go</span> these days.
+            </p>
+            <p>
+                My goal is to obtain grasp on the essence of being a web developer while having fun and experimenting with all sorts of technologies.<br>
+                And (hopefully) build something meaningful and impactful one day.
+            </p>
+
+            <div>
+                <span class="text-secondary">nonezerone@devnull </span>
+                <span class="text-background">~ </span>
+                <span class="cursor">$ </span>
+                <span class="command">cat </span>
+                <span class="path">docs/my_interests.md</span>
+            </div>
+            <h3>Interests</h3>
+            <ul>
+                <li>UNIX-based operating systems</li>
+                <li>backend development</li>
+                <li>tinkering with stuff</li>
+                <li>VHS era aesthetic</li>
+            </ul>
+
+            <div>
+                <span class="text-secondary">nonezerone@devnull </span>
+                <span class="text-background">~ </span>
+                <span class="cursor">$ </span>
+                <span class="command">./about_me </span>
+                <span class="flag">--version</span>
+            </div>
+            <h3>0.0.4</h3>
+        </section>
+    </body>
+</html>
